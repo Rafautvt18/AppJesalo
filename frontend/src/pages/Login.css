@@ -1,0 +1,171 @@
+/* Contenedor principal */
+.login-container {
+  display: flex;
+  height: 85vh;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #e9ecef, #f8f9fa); /* Fondo degradado sutil */
+  padding: 20px;
+}
+
+/* Caja principal que agrupa la imagen y el formulario */
+.login-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 900px;
+  background: linear-gradient(to bottom, #ffffff, #f4f4f4);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-box:hover {
+  transform: scale(1.01); /* Efecto de "zoom" al pasar el mouse */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Sección de la imagen */
+.login-image {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.login-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.9); /* Oscurece ligeramente la imagen para más impacto */
+}
+
+/* Sección del formulario */
+.login-form {
+  width: 50%;
+  padding: 40px 50px; /* Más espaciamiento */
+  box-sizing: border-box;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Encabezado del formulario */
+.login-form h2 {
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #343a40;
+  letter-spacing: 1px; /* Espaciado de letras */
+}
+
+/* Grupo de campos del formulario */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #495057;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #495057;
+  background-color: #f8f9fa;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3); /* Resaltado en el foco */
+  outline: none;
+}
+
+/* Botón principal */
+.btn-primary {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #007bff, #0056b3); /* Degradado llamativo */
+  color: #fff;
+  border: none;
+  border-radius: 25px; /* Bordes redondeados para mayor estilo */
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  text-transform: uppercase;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #0056b3, #003f7f);
+  transform: scale(1.03); /* Más zoom al hover */
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4); /* Sombra adicional */
+}
+
+/* Botón animado */
+.btn-primary:active {
+  transform: scale(0.98);
+}
+/* Agrupación del ícono y el input */
+.input-icon-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 10px;
+  color: #6c757d;
+  font-size: 1.2rem;
+}
+
+.input-icon-group input {
+  width: 100%;
+  padding: 10px 10px 10px 40px; /* Espacio para el ícono */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333;
+  transition: border-color 0.3s ease;
+}
+
+.input-icon-group input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Ajustes de márgenes para que no se desalineen */
+.input-icon-group + .form-group {
+  margin-top: 20px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .login-box {
+    flex-direction: column;
+  }
+
+  .login-image {
+    width: 100%;
+    height: 200px;
+  }
+
+  .login-form {
+    width: 100%;
+    padding: 30px;
+  }
+}

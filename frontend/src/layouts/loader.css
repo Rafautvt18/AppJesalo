@@ -1,0 +1,20 @@
+.loader-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh; /* Altura completa de la ventana */
+}
+
+.loader {
+    width: 120px;
+    height: 20px;
+    border-radius: 20px;
+    background:
+      linear-gradient(orange 0 0) 0/0% no-repeat
+      lightblue;
+    animation: l2 2s infinite steps(10);
+}
+
+@keyframes l2 {
+    100% {background-size:110%}
+}
